@@ -9,7 +9,12 @@ Questa cartella contiene la conoscenza che deve poter essere compresa anche senz
 
 Il repository non deve diventare un archivio indiscriminato di tutto ciò che è stato discusso. Deve distinguere chiaramente tra evidenza, lavoro in corso, decisioni consolidate e specifiche implementabili.
 
+Repository e Linear devono contenere insieme il contesto sufficiente perché Codex possa continuare il progetto. Notion resta utile per ricerca estesa, intuizioni, percorso narrativo e case study, ma non deve contenere requisiti o stato operativo indispensabili e assenti dalle prime due fonti.
+
 ## Struttura
+
+### `metodo-di-lavoro.md`
+Metodo corrente con cui Fold viene esplorato, progettato, documentato, realizzato e verificato. Definisce anche il passaggio dall'esplorazione alla memoria persistente.
 
 ### `product/`
 Definizione corrente del prodotto e del perimetro del MVP: problema, comportamento, utenti, scope e vincoli di prodotto già consolidati.
@@ -23,20 +28,25 @@ Decisioni importanti che devono restare comprensibili nel tempo, incluse motivaz
 ### `specs/`
 Specifiche di funzioni o componenti sufficientemente mature da guidare l'implementazione e la verifica.
 
+### `milestones/`
+Sintesi storiche autosufficienti delle milestone concluse. Riassumono e collegano il lavoro senza duplicare integralmente issue e checkpoint. Nelle milestone ricostruite retrospettivamente possono indicare, in una sezione separata, le evoluzioni già note al momento della ricostruzione; dopo il consolidamento non diventano registri continuamente aggiornati.
+
 ### `ricerca/`
 Ricerca, evidenze e analisi. Il contenuto di questa cartella non diventa automaticamente una regola di Fold.
 
 ## Stati ammessi
 
-Ogni nuovo documento significativo dovrebbe dichiarare uno stato vicino all'inizio:
+Ogni documento significativo deve dichiarare uno stato vicino all'inizio:
 
-- `Canonical` — conoscenza corrente approvata;
-- `Draft` — ancora in elaborazione;
-- `Research` — evidenza o analisi;
+- `Canonical` — conoscenza sufficientemente consolidata per guidare il lavoro corrente;
+- `Draft` — materiale in elaborazione che può sostenere esplorazione e progettazione, ma non costituisce implicitamente requisito implementativo;
+- `Research` — evidenza o analisi, non automaticamente decisione;
 - `Historical` — fotografia di una fase precedente;
-- `Superseded` — sostituito, con riferimento alla fonte successiva.
+- `Superseded` — documento sostituito da una fonte successiva esplicitamente indicata.
 
-Quando utile, aggiungere anche `Supersedes:` o `Superseded by:`.
+Per un documento `Superseded`, `Superseded by:` è obbligatorio. `Supersedes:` può essere indicato quando un nuovo documento sostituisce esplicitamente una fonte precedente.
+
+Il processo con cui una conoscenza viene consolidata come `Canonical` è definito in `metodo-di-lavoro.md`.
 
 ## Precedenza
 
@@ -52,9 +62,9 @@ In caso di divergenza:
 ## Materiale precedente già presente
 
 ### `fondamenti-fold.md`
-È la prima baseline formale del progetto, creata il 19 agosto 2026. Ha valore storico e contiene decisioni che hanno guidato la fase successiva, ma **non va trattata oggi come descrizione automaticamente canonica dell'intero modello di Fold**: il core informativo è attualmente sottoposto a nuova verifica e alcune distinzioni si sono evolute.
+È la prima baseline formale del progetto, creata il 19 agosto 2026. Ha valore storico e contiene decisioni che hanno guidato una fase precedente, ma non costituisce automaticamente il modello corrente di Fold.
 
-Per ora il file viene preservato senza riscriverlo. Le parti che superano la verifica corrente verranno promosse nei documenti canonici appropriati; le altre resteranno come storia progettuale.
+Ciò che resta valido deve vivere nei documenti canonici appropriati. Per il lavoro corrente fanno fede le fonti canoniche pertinenti.
 
 ### `ricerca/bollette-luce-gas-arera.md`
 Materiale di ricerca sul dominio delle utenze. Non definisce il modello generale di Fold.
@@ -64,20 +74,18 @@ Materiale di ricerca sul significato degli identificatori osservati nelle bollet
 
 ## Passaggio verso il repository
 
-Il flusso desiderato è:
+Non ogni esplorazione produce memoria persistente. Il passaggio concettuale è:
 
 ```text
-ricerca / conversazione / lavoro in Linear
-                ↓
-       conclusione verificata
-                ↓
-    consolidamento nel repository
-                ↓
-       specifica implementabile
-                ↓
-              Codex
-                ↓
-      implementazione + verifica
+esplorazione
+     ↓
+classificazione dell'esito
+     ↓
+persistenza nella fonte appropriata
+     ↓
+eventuale consolidamento nel repository
+     ↓
+realizzazione e verifica
 ```
 
-Una conversazione non è una dipendenza accettabile dell'implementazione.
+La classificazione degli esiti e le regole operative per intuizioni, cambiamenti progettuali, checkpoint, fallback e chiusure sono definite in `metodo-di-lavoro.md`.
