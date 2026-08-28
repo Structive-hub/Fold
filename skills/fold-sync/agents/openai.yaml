@@ -1,0 +1,7 @@
+interface:
+  display_name: "Fold sync"
+  short_description: "Preserve significant Fold work across project sources"
+  default_prompt: "Usa $fold-sync 30 per preservare gli esiti recenti del lavoro su Fold."
+
+policy:
+  allow_implicit_invocation: false
