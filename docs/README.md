@@ -72,6 +72,17 @@ Materiale di ricerca sul dominio delle utenze. Non definisce il modello generale
 ### `ricerca/semantica-identificatori.md`
 Materiale di ricerca sul significato degli identificatori osservati nelle bollette. Non definisce da solo il modello generale degli identificatori di Fold.
 
+## Materiale corrente per l'esplorazione del Core
+
+### `ricerca/fondamenti-rappresentazione-conoscenza.md`
+Ricerca metodologica e fondazionale su realtà vs conoscenza, identità, tempo, provenienza, revisione, relazioni ed eventi. Serve a far emergere distinzioni necessarie senza scegliere primitive o tecnologie in anticipo. Ha stato `Research`.
+
+### `ricerca/esempio-operativo-core-dominio.md`
+Worked example neutro che mette sotto pressione la separazione analitica tra rappresentazione della realtà, Domain, conoscenza del sistema e meccanismi. Ha stato `Research` e non definisce un'architettura.
+
+### `architecture/core-domain-working-model.md`
+Working model corrente nato dal confronto tra ricerca ed esplorazione progettuale. Distingue Source/Extraction, Mapping/Interpretation, Core Model, Domain Model, Knowledge, Core Engine e Views/Functions come responsabilità da verificare. Ha stato `Draft`: deve essere criticato e falsificato prima di qualsiasi consolidamento.
+
 ## Passaggio verso il repository
 
 Non ogni esplorazione produce memoria persistente. Il passaggio concettuale è:
