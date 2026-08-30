@@ -2,7 +2,7 @@
 
 **Status:** Active project
 
-Fold viene sviluppato prima di tutto come prodotto realmente utile e funzionante. La prima realizzazione è **Fold — MVP domestico**: una versione utilizzabile nel contesto di casa, progettata senza chiudere inutilmente la strada alle evoluzioni future.
+Fold viene sviluppato prima di tutto come prodotto realmente utile e funzionante. La prima realizzazione e il perimetro di implementazione corrente sono **Fold — MVP domestico**. Il MVP non è però il limite concettuale contro cui vengono validate le fondamenta del progetto: la distinzione è definita nella decisione [`0001 — Distinguere perimetro di implementazione e perimetro di validazione fondazionale`](docs/decisions/0001-perimetro-implementazione-validazione-fondazionale.md).
 
 Questo repository contiene la memoria ufficiale e versionata di ciò che Fold consolida e costruisce: documentazione canonica, decisioni, specifiche, configurazioni e codice.
 

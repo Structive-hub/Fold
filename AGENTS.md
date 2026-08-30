@@ -58,6 +58,12 @@ Segui eventuali indicazioni esplicite `Supersedes` / `Superseded by` e le decisi
 - Prima di considerare una task conclusa, verifica i criteri di accettazione presenti nella relativa specifica.
 - Non eseguire commit, push o creare branch salvo richiesta esplicita.
 
+## Progettazione delle fondamenta
+
+- In una normale task di implementazione segui soltanto il perimetro corrente e i requisiti consolidati; non introdurre pressioni future nel lavoro.
+- Quando una task progetta esplicitamente fondamenta o contratti strutturali, distingui una futura funzione da una pressione fondazionale già autorizzata secondo la decisione pertinente.
+- Usa una pressione fondazionale esclusivamente per falsificare assunzioni strutturali e individuare perdite semantiche concrete. Non implementare anticipatamente le capacità future analizzate e non ampliare implicitamente il perimetro corrente.
+
 ## Chiusura del lavoro
 
 Non considerare conclusa una issue significativa soltanto perché la discussione o l'implementazione sono terminate. La chiusura deve rendere recuperabili in Linear almeno risultato, verifica, artefatti prodotti, fuori scope residuo, dipendenze aggiornate e lavoro sbloccato.

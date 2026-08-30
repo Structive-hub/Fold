@@ -2,6 +2,8 @@
 
 **Status:** Canonical  
 **Date:** 2026-08-27  
+**Last updated:** 2026-08-30
+
 **Scope:** esplorazione, progettazione, documentazione, realizzazione e verifica del progetto
 
 ## 1. Origine ed evoluzione
@@ -80,6 +82,10 @@ modello astratto → tentativo di adattarvi la realtà
 ```
 
 Problemi, documenti, comportamenti, casi d'uso e situazioni reali devono mettere alla prova il modello. Il futuro va considerato soprattutto per non chiudere inutilmente possibilità importanti, non per introdurre ora tecnologie, astrazioni o funzioni che il MVP non richiede.
+
+Durante la progettazione di fondamenta o contratti strutturali, complessità future già consolidate nella direzione di Fold possono essere usate come pressioni di falsificazione quando servono a distinguere una buona semplificazione da un collasso semantico. Le pressioni devono essere deliberate, limitate e pertinenti alla fondazione esaminata. Il loro uso non amplia il perimetro implementativo, non genera automaticamente backlog, non rende un sistema futuro requisito del MVP e non autorizza progettazione speculativa general-purpose.
+
+La distinzione completa fra perimetro di implementazione e perimetro di validazione fondazionale è definita nella decisione [`0001 — Distinguere perimetro di implementazione e perimetro di validazione fondazionale`](decisions/0001-perimetro-implementazione-validazione-fondazionale.md).
 
 ## 6. Documentare ciò che è significativo
 
@@ -243,6 +249,7 @@ Linear mantiene stato e roadmap; il documento nel repository conserva il risulta
 - Consulta esplicitamente il repository e Linear pertinenti invece di presumere o ignorare il loro contenuto.
 - Fornisci a Codex soltanto il contesto necessario al risultato richiesto, senza orientarlo prematuramente con conoscenze future non ancora acquisite dal progetto.
 - Non introdurre prematuramente tecnologie o concetti futuri soltanto per prepararli o escluderli.
+- Quando il lavoro progetta fondamenta o contratti strutturali, distingui le future feature dalle pressioni strutturali già consolidate: queste ultime possono falsificare una semplificazione senza ampliare il perimetro da implementare.
 - Linear può definire il contratto operativo della issue corrente; se una regola o decisione sostanziale deve guidare Fold oltre quella issue e non è consolidata nel repository, segnala il vuoto invece di trattarla come conoscenza canonica o colmarla per supposizione.
 - Distingui sempre ricerca, intuizione, decisione, conoscenza canonica e risultato realizzato.
 - Non trasformare una vecchia decisione in regola corrente senza verificarne stato e provenienza.
