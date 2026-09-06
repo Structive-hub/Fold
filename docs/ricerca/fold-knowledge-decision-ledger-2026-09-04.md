@@ -982,7 +982,7 @@ Le fonti primarie originarie restano esterne al repository; il Ledger ne conserv
 - **Conoscenza:** Current-State Derivation come nome sempre derivativo
 - **Natura:** RICLASSIFICAZIONE; SUPERAMENTO
 - **Stato:** SUPERATA
-- **Origine:** R3 §R3.3, Componenti interessati; AUDIT §25g
+- **Origine:** R3 §R3.3, Componenti interessati; AUDIT §B 25h
 - **Problema che risolve:** Il nome assumeva una nuova derivazione per ogni stato corrente.
 - **Ultima formulazione giustificata:** Formulazione precedente troppo vincolante: una ricostruzione può comporre recupero, selezione e ragionamento senza produrre sempre una nuova Assertion.
 - **Supera:** —
@@ -995,7 +995,7 @@ Le fonti primarie originarie restano esterne al repository; il Ledger ne conserv
 - **Conoscenza:** Current Reconstruction contestualizzata
 - **Natura:** RESPONSABILITÀ NECESSARIA; DEFINIZIONE
 - **Stato:** STABILE
-- **Origine:** R3 §R3.3; AUDIT §25g
+- **Origine:** R3 §R3.3; AUDIT §B 25h
 - **Problema che risolve:** Ultimo arrivo e valore corrente erano equiparati.
 - **Ultima formulazione giustificata:** Sintetizzare ciò che Fold può sostenere su referente/aspetto per un tempo e scopo, con basi, conflitti, correzioni, assunzioni e limiti. Può essere incompleta/non univoca; non è necessariamente nuovo fatto o nuova derivazione.
 - **Supera:** K-072
@@ -1780,7 +1780,7 @@ Le fonti primarie originarie restano esterne al repository; il Ledger ne conserv
 - **Conoscenza:** Document Identity Reconciliation nascondeva quattro problemi
 - **Natura:** RICLASSIFICAZIONE; RESPONSABILITÀ NECESSARIA
 - **Stato:** STABILE
-- **Origine:** R5 Document Identity Reconciliation; AUDIT §25h
+- **Origine:** R5 Document Identity Reconciliation; AUDIT §B 25b
 - **Problema che risolve:** Una sola responsabilità mescolava copie, parti, identità e rettifiche.
 - **Ultima formulazione giustificata:** Deduplicazione tecnica al confine d'ingresso; composizione documentale nell'interpretazione; sola coreferenza documentale come specializzazione di Reconciliation; versione/rettifica con confronto e semantica Domain. Nessuna capacità eliminata col nome.
 - **Supera:** —
@@ -1912,7 +1912,7 @@ Le fonti primarie originarie restano esterne al repository; il Ledger ne conserv
 - **Conoscenza:** Referent come locus interno, anche per soggetti proposti o ipotetici
 - **Natura:** DEFINIZIONE; SUPERAMENTO
 - **Stato:** CANDIDATA
-- **Origine:** R6 §II Q1–Q3; §III.1; §V.1
+- **Origine:** R6 §II Q1–Q3; §III.8; §V.1
 - **Problema che risolve:** La definizione esterna R5 escludeva soggetti pianificati o contestati e confondeva riconoscimento con esistenza.
 - **Ultima formulazione giustificata:** Referent è il locus referenziale interno di un soggetto proposto o riconosciuto. Può riferirsi a soggetti reali, passati, pianificati, ipotetici o documentali; natura ed esistenza sono sostenute da Assertion, non garantite dal locus. Non ogni elemento indirizzabile diventa Referent.
 - **Supera:** K-120
