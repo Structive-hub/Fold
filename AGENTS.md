@@ -3,6 +3,8 @@
 **Status:** Canonical  
 **Scope:** modalità di lavoro nel repository
 
+Questo file definisce il comportamento richiesto agli agenti e indica gli entry point stabili da consultare. La mappa dettagliata e aggiornata degli artefatti, con il loro stato e la loro autorità, resta in `docs/README.md`; i documenti specifici conservano il contenuto effettivo.
+
 ## Regola fondamentale
 
 Repository e Linear devono contenere insieme il contesto sufficiente perché Codex possa continuare Fold senza dipendere da Notion o da conversazioni precedenti.
@@ -17,12 +19,30 @@ Non assumere di conoscere contenuti non ancora consultati e non ignorare le font
 
 Prima di modificare Fold:
 
-1. leggi `README.md`;
-2. leggi `docs/README.md` per capire stato e ruolo dei documenti;
+1. leggi `README.md` per l'orientamento generale e lo stato del progetto;
+2. leggi `docs/README.md` per individuare il riferimento corrente dell'area, la mappa documentale e l'autorità degli artefatti;
 3. leggi `docs/metodo-di-lavoro.md` quando devi avviare, riprendere o chiudere un lavoro significativo;
-4. leggi i documenti canonici pertinenti alla task in `docs/product/`, `docs/architecture/`, `docs/decisions/` e `docs/specs/`;
-5. usa la ricerca in `docs/ricerca/` soltanto come evidenza o materiale di supporto, mai come requisito implicito;
+4. leggi i documenti canonici pertinenti alla task in `docs/product/`, `docs/decisions/` e `docs/specs/`; consulta `docs/architecture/` per il modello o l'architettura soltanto quando i documenti pertinenti risultano sufficientemente consolidati per l'uso richiesto;
+5. usa `docs/ricerca/` per materiale `Research`, `Draft`, `Historical` o di supporto, mai come fonte automaticamente canonica; quando `docs/README.md` assegna esplicitamente a un artefatto di ricerca un ruolo corrente, consultalo entro quel ruolo e con l'autorità dichiarata;
 6. se il lavoro appartiene a una issue o milestone, consulta in Linear descrizione, stato, dipendenze e checkpoint significativi. Se Linear non è accessibile, non inventare lo stato operativo mancante.
+
+## AGENTS impact check
+
+Ogni modifica significativa del repository deve includere un **AGENTS impact check**. Verifica se il cambiamento modifica il comportamento richiesto agli agenti, l'ordine di lettura, gli entry point, oppure l'autorità, lo stato o il ruolo delle fonti che gli agenti devono conoscere.
+
+Se uno di questi aspetti cambia, `AGENTS.md` deve essere aggiornato nello stesso blocco coerente. Se non cambia, non modificare `AGENTS.md` per inerzia.
+
+Il check è necessario almeno quando:
+
+- nasce un nuovo entry point stabile;
+- viene sostituito il riferimento corrente per un'area;
+- cambia lo stato, l'autorità o il ruolo di una fonte che gli agenti devono conoscere;
+- una fonte necessaria viene spostata;
+- cambia l'ordine di lettura;
+- cambia il metodo operativo;
+- un riferimento presente in `AGENTS.md` diventa obsoleto.
+
+Non richiede automaticamente una modifica di `AGENTS.md` la creazione di ogni file `Research`, di ogni Gate o di ogni documento aggiuntivo, né l'aggiunta di artefatti già correttamente raggiungibili attraverso `docs/README.md`.
 
 ## Stati della conoscenza
 

@@ -8,7 +8,11 @@ Questo repository contiene la memoria ufficiale e versionata di ciò che Fold co
 
 ## Stato attuale del repository
 
-Il progetto è ancora nella fase di progettazione del MVP e del suo core informativo. Non è ancora stata consolidata qui un'architettura tecnica di implementazione né uno stack applicativo.
+Fold è ancora nella fase di progettazione del MVP domestico. La baseline concettuale v2.1 dell'anatomia è stata congelata come `Draft` per la successiva falsificazione: non è `Canonical`, non è ancora validata sui casi domestici o cross-domain e non autorizza implementazione. Non sono ancora stati scelti un'architettura tecnica di implementazione o uno stack applicativo.
+
+Il passaggio successivo è FOL-37, la falsificazione domestica e cross-domain della baseline congelata.
+
+Per lo stato corrente del lavoro concettuale e la mappa degli artefatti, consultare [`docs/README.md`](docs/README.md).
 
 ## Come orientarsi
 
