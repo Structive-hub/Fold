@@ -71,6 +71,12 @@ Segui eventuali indicazioni esplicite `Supersedes` / `Superseded by` e le decisi
 
 ## Regole di implementazione
 
+### Slice locale corrente
+
+Dal 2 novembre 2026 l'utente ha autorizzato esplicitamente l'avvio di una funzionalità eseguibile e delegato le scelte tecniche necessarie. Prima di proseguire il codice leggere il **README principale**, che conserva perimetro realizzato, avvio, prove e limiti, e `docs/architecture/README.md` per le scelte della slice. Entry point: `python -m fold_app`, `Start-Fold.ps1`; test: `python -m unittest discover -s tests -v`.
+
+La baseline v2.1 rimane Draft e congelata; questa autorizzazione non conclude FOL-37 e non rende canonico l'intero modello. Non trasformare lo stato Draft dell'intera anatomia in un divieto automatico di mantenere la funzione già autorizzata. Conservare il confine tra `core.py` e `electricity.py`, usare dati fittizi nei test e aggiornare il riepilogo esistente con risultati effettivamente verificati.
+
 - Implementa il perimetro corrente, non possibilità future non ancora acquisite dal progetto.
 - Non introdurre tecnologie, componenti o astrazioni future solo per prepararle o escluderle.
 - Non dedurre requisiti mancanti dalla struttura esistente del codice.

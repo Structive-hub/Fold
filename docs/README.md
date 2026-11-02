@@ -3,7 +3,13 @@
 **Status:** Canonical  
 **Scope:** governo della conoscenza nel repository
 
-## Scopo
+## Implementazione locale corrente
+
+Dal 2 novembre 2026 è disponibile una slice eseguibile autorizzata dall'utente: bolletta elettrica PDF con testo, evidenze, revisioni e situazione spiegabile. Il **[README principale](../README.md)** conserva perimetro effettivo, avvio, prova guidata, verifiche e limiti. Il codice è in `fold_app/` e i test in `tests/`; le scelte tecniche limitate sono riassunte in [architecture/README.md](architecture/README.md).
+
+Questa autorizzazione all'implementazione non promuove la baseline v2.1 e non dichiara concluse FOL-37/FOL-38/FOL-39. Gli stati storici e i documenti congelati sotto restano invariati. La funzione realizzata va distinta dalla validazione dell'intero modello.
+
+## Governo della conoscenza
 
 Questa cartella contiene la conoscenza che deve poter essere compresa anche senza accesso alle conversazioni esterne al repository.
 
