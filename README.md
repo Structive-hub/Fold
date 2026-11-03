@@ -14,6 +14,10 @@ Il codice è in `fold_app/`; le verifiche ripetibili sono in `tests/`. Sono real
 
 La baseline concettuale v2.1 resta **Draft** e congelata: questa implementazione limitata non la promuove, non conclude FOL-37 e non fissa l'architettura definitiva di Fold. Nessun documento reale è stato usato come dato di prova. La scelta dell'intero perimetro MVP e la falsificazione complessiva restano distinte dal risultato software qui disponibile.
 
+## Riferimento UX separato
+
+Dal 3 novembre 2026, [`docs/ux/README.md`](docs/ux/README.md) raccoglie la direzione UX/UI **Draft**, con cinque viste navigabili e dati fittizi. Aprire `docs/ux/reference/index.html` con un browser, senza installazioni. È un prototipo isolato: non modifica l'app funzionante, non importa documenti e non salva dati. Screenshot reali desktop/mobile e proposta di integrazione progressiva sono nella stessa cartella. L'integrazione nel runtime richiede una successiva autorizzazione.
+
 ## Avvio su Windows
 
 Da PowerShell, nella cartella del repository:

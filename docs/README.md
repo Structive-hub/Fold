@@ -9,6 +9,10 @@ Dal 2 novembre 2026 è disponibile una slice eseguibile autorizzata dall'utente:
 
 Questa autorizzazione all'implementazione non promuove la baseline v2.1 e non dichiara concluse FOL-37/FOL-38/FOL-39. Gli stati storici e i documenti congelati sotto restano invariati. La funzione realizzata va distinta dalla validazione dell'intero modello.
 
+## Direzione UX/UI in valutazione
+
+[`ux/README.md`](ux/README.md) è l'entry point **Draft** del prototipo UX isolato v0.2, consolidato il 3 novembre 2026 sui materiali forniti dall'utente. Contiene cinque viste navigabili, motivazioni, differenze dai concept, matrice runtime/simulazioni, screenshot browser reali e proposta di integrazione incrementale. I tre concept più recenti guidano l'aspetto entro i vincoli testuali dell'utente; i riferimenti precedenti rimangono materiale di supporto. Non è una specifica canonica di backend, non modifica la baseline v2.1 e non autorizza ancora l'integrazione nell'app.
+
 ## Governo della conoscenza
 
 Questa cartella contiene la conoscenza che deve poter essere compresa anche senza accesso alle conversazioni esterne al repository.

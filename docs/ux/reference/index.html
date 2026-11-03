@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Fold — Laboratorio UX v0.2</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./refinements.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Salta al contenuto</a>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button id="mobileMenu" class="icon-btn mobile-only" type="button" aria-label="Apri navigazione" aria-expanded="false">☰</button>
+        <button id="brand" class="brand" type="button" data-go="situation" aria-label="Vai alla situazione">
+          <span class="brand-mark" aria-hidden="true">◇</span><span>Fold</span>
+        </button>
+        <span class="prototype-tag">PROTOTIPO · DATI FITTIZI · NON SALVATI</span>
+      </div>
+      <div class="topbar-right">
+        <button id="globalSearch" class="search-trigger" type="button" title="Ricerca globale (/)" aria-label="Apri la ricerca globale"><span class="search-symbol">⌕</span><span class="search-hint">Cerca in Fold</span><kbd>/</kbd></button>
+        <button id="settings" class="icon-btn" type="button" title="Personalizza le aree" aria-label="Personalizza le aree">⚙</button>
+        <button id="notifications" class="icon-btn" type="button" title="Mostra elementi da controllare" aria-label="Mostra situazioni da controllare">◷</button>
+        <button id="addDoc" class="btn primary" type="button" aria-label="Acquisisci"><span aria-hidden="true">＋</span><span>Acquisisci</span></button>
+      </div>
+    </header>
+    <div class="demo-strip">Laboratorio UX · Tutti i dati e gli interventi sono dimostrativi e si azzerano ricaricando la pagina.</div>
+
+    <div class="workspace">
+      <aside id="sidebar" class="sidebar" aria-label="Navigazione principale">
+        <nav class="side-nav">
+          <div class="nav-group">
+            <button class="nav-item" data-go="situation" data-nav="situation" type="button"><span class="nav-icon" aria-hidden="true">▦</span>Situazione</button>
+            <button class="nav-item" data-go="archive" data-nav="archive" type="button"><span class="nav-icon" aria-hidden="true">▤</span>Esplora</button>
+          </div>
+          <div class="side-section" id="areaNav">
+            <div class="side-title"><span>CASSETTONI E SCHEDE</span><button type="button" id="editAreas" class="small-icon-btn" aria-label="Modifica le aree">＋</button></div>
+            <div id="areaLinks"></div>
+          </div>
+          <div class="side-section">
+            <div class="side-title">ACCESSI RAPIDI</div>
+            <button class="side-link" data-action="quick-pending" type="button"><span class="mini-dot amber"></span>Da controllare</button>
+            <button class="side-link" data-go="asset" type="button">◇ Vista per bene</button>
+            <button class="side-link" data-action="quick-recent" type="button"><span class="mini-dot neutral"></span>Ultimi documenti</button>
+          </div>
+        </nav>
+        <div class="sidebar-footer"><span class="local-sign">▣</span><div>Prototipo isolato<small>Nessun salvataggio o upload reale</small></div></div>
+      </aside>
+      <main id="content" class="main-content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <dialog id="areasModal" aria-labelledby="areas-title" class="modal">
+    <form method="dialog" class="modal-body">
+      <div class="modal-head"><div><p class="eyebrow">PERSONALIZZAZIONE</p><h2 id="areas-title">Le tue aree</h2></div><button class="icon-btn" type="submit" aria-label="Chiudi">×</button></div>
+      <p class="muted">Le aree attive compaiono nella navigazione. Non modificano, spostano o eliminano alcun documento.</p>
+      <div id="areaOptions" class="area-options"></div>
+      <button type="submit" class="btn primary full">Torna all'app</button>
+    </form>
+  </dialog>
+
+  <dialog id="searchModal" aria-labelledby="search-title" class="modal search-modal">
+    <form method="dialog" class="modal-body" id="searchForm">
+      <div class="modal-head"><h2 id="search-title">Ricerca globale</h2><button type="submit" class="icon-btn" aria-label="Chiudi">×</button></div>
+      <label class="field-label" for="globalQuery">Cerca in tutti i documenti e i riferimenti</label>
+      <input id="globalQuery" placeholder="Es. bolletta, luce, casa" autocomplete="off">
+      <div id="globalResults" class="global-results" aria-live="polite"></div>
+      <p class="muted micro">Ricerca dimostrativa sui dati di esempio; nessun indice reale.</p>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="paymentModal" class="modal" aria-labelledby="payment-title">
+    <form id="paymentForm" class="modal-body">
+      <div class="modal-head"><h2 id="payment-title">Dichiara il pagamento · simulazione</h2><button class="icon-btn" type="button" data-action="close-payment" aria-label="Chiudi dichiarazione">×</button></div>
+      <p class="subtle">La dichiarazione resta distinta dalla fonte documentale. Nessuna verifica bancaria e nessun salvataggio reale.</p>
+      <label class="field-label" for="paymentNote">Che cosa hai verificato?</label>
+      <textarea id="paymentNote" rows="3" required maxlength="500" placeholder="Esempio fittizio: dichiaro di aver pagato il 30 ottobre."></textarea>
+      <button class="btn primary" type="submit">Simula la dichiarazione</button>
+    </form>
+  </dialog>
+</body>
+</html>

@@ -84,6 +84,10 @@ La baseline v2.1 rimane Draft e congelata; questa autorizzazione non conclude FO
 - Prima di considerare una task conclusa, verifica i criteri di accettazione presenti nella relativa specifica.
 - Non eseguire commit, push o creare branch salvo richiesta esplicita.
 
+## Prototipo UX isolato
+
+Dal 3 novembre 2026, prima di lavorare sulla direzione UX leggere `docs/ux/README.md` e i riferimenti indicati. È un laboratorio **Draft**, separato da `fold_app/`, con dati e interventi fittizi in memoria. Entry point: `docs/ux/reference/index.html`. I concept recenti hanno priorità visiva entro i vincoli testuali dell'utente; screenshot e mockup non definiscono capacità backend. L'integrazione nel runtime richiede successiva autorizzazione. Non trasformare funzioni simulate in requisiti già implementati o in una promozione dell'anatomia.
+
 ## Progettazione delle fondamenta
 
 - In una normale task di implementazione segui soltanto il perimetro corrente e i requisiti consolidati; non introdurre pressioni future nel lavoro.
