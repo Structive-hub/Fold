@@ -4,33 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="fold-token" content="__FOLD_TOKEN__">
-  <title>Fold — La memoria di casa</title>
+  <title>Fold — Bollette elettriche</title>
   <link rel="stylesheet" href="/style.css">
   <script src="/app.js" defer></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="/" aria-label="Fold, pagina iniziale"><span class="mark">f</span>fold<span class="preview">PRIMA VERSIONE</span></a>
-    <div class="top-actions"><a class="button quiet" href="/api/backup">Esporta una copia</a><button class="button dark" id="upload">＋ Aggiungi PDF</button></div>
+    <a class="brand" href="/" aria-label="Fold, archivio bollette">fold<small>Il tuo archivio di casa</small></a>
+    <div class="top-actions"><a class="button quiet" href="/api/backup">Esporta una copia</a><button class="button primary" id="upload">Aggiungi PDF</button></div>
     <input id="file" type="file" accept="application/pdf,.pdf" hidden aria-label="Seleziona una bolletta PDF">
   </header>
   <div class="workspace">
-    <aside class="sidebar">
-      <div class="space-label"><span class="dot"></span> Il tuo spazio domestico</div>
-      <h2>Bollette elettriche <span id="count">0</span></h2>
-      <nav id="documents" aria-label="Documenti acquisiti"></nav>
-      <div class="sidebar-bottom"><span class="lock">◈</span><div><strong>Su questo computer</strong><p>I documenti vengono elaborati e conservati localmente.</p></div></div>
-    </aside>
-    <main id="main" tabindex="-1">
-      <section class="welcome">
-        <div class="eyebrow">MENO RICERCHE. PIÙ CHIAREZZA.</div>
-        <h1>Una bolletta.<br>Tutto il suo contesto.</h1>
-        <p class="intro">Ritrova i dati importanti, controlla da dove arrivano e mantieni traccia di ciò che cambia.</p>
-        <div class="welcome-actions"><button class="button dark large" id="empty-upload">Aggiungi la prima bolletta</button><button class="button outline large" id="demo">Prova con un esempio</button></div>
-        <p class="hint">Per ora: PDF con testo, fino a 10 MB e 50 pagine. Le scansioni richiedono un OCR che arriverà in un prossimo incremento.</p>
-        <div class="steps"><article><span>01</span><h3>Conserva la fonte</h3><p>L'originale rimane disponibile, anche quando la lettura è incompleta.</p></article><article><span>02</span><h3>Comprendi i dati</h3><p>Ogni valore letto rimanda a un frammento e a una pagina.</p></article><article><span>03</span><h3>Segui la situazione</h3><p>Scadenza, dichiarazioni e correzioni restano distinguibili.</p></article></div>
-      </section>
-    </main>
+    <nav class="archive-strip" aria-label="Archivio corrente"><strong>Bollette elettriche <span class="count" id="archive-count">0</span></strong><span>Documenti conservati su questo computer</span></nav>
+    <main id="main" tabindex="-1"><p class="muted" role="status">Apro l’archivio…</p></main>
   </div>
   <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
   <dialog id="editor" aria-labelledby="editor-title">
@@ -42,7 +28,7 @@
       <label>Motivo o dichiarazione<textarea id="edit-note" required maxlength="1000" rows="3" placeholder="Indica che cosa hai verificato o perché correggi questo dato."></textarea></label>
       <p class="hint">La versione precedente e la fonte vengono conservate. La modifica riguarda soltanto questo dato.</p>
       <div id="edit-error" role="alert" class="form-error"></div>
-      <button class="button dark full" id="save" type="submit">Salva la verifica</button>
+      <button class="button primary full" id="save" type="submit">Salva la verifica</button>
     </form>
   </dialog>
 </body>

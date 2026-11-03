@@ -18,6 +18,20 @@ La baseline concettuale v2.1 resta **Draft** e congelata: questa implementazione
 
 Dal 3 novembre 2026, [`docs/ux/README.md`](docs/ux/README.md) raccoglie la direzione UX/UI **Draft**, con cinque viste navigabili e dati fittizi. Aprire `docs/ux/reference/index.html` con un browser, senza installazioni. È un prototipo isolato: non modifica l'app funzionante, non importa documenti e non salva dati. Screenshot reali desktop/mobile e proposta di integrazione progressiva sono nella stessa cartella. L'integrazione nel runtime richiede una successiva autorizzazione.
 
+## Prima integrazione UX nel runtime — 3 novembre 2026
+
+L'app reale ora apre la lista delle **bollette elettriche archiviate**. Tema grafite piatto; righe per confrontare numero/file, POD, importo, scadenza, situazione e provenienza dei dati. Ricerca per numero, file, POD o importo; filtro per dati da chiarire, scadenza entro 30 giorni, scadenza superata e dichiarazioni di pagamento; ordinamento per acquisizione, scadenza, importo o numero.
+
+Il dettaglio mostra subito importo, scadenza e situazione motivata. Ogni dato conserva origine, evidenza apribile, pagina/frammento e correzione mirata; dichiarazioni e cronologia rimangono distinte. **Torna alle bollette** e Indietro del browser ripristinano ricerca, filtro, ordine, selezione e posizione, recuperando i dati aggiornati. I criteri di consultazione restano anche al ricaricamento nella stessa sessione del browser; non sono viste salvate permanenti.
+
+Sono usate esclusivamente le API già presenti. Nessuna migrazione o modifica a Core, regole elettriche, parser, salvataggi o protezioni HTTP. Nessun fornitore, periodo, persona o bene dedotto; nessuna demo inserita dalla UI. Eventuali esempi già archiviati dal backend sono etichettati come tali. La v0.2 in `docs/ux/` resta Draft e riferimento comportamentale: la sua palette e le funzioni simulate non sono il contratto del runtime.
+
+**Prova personale:** avvia come sotto, cerca una bolletta, combina filtro e ordine, aprila, espandi un'evidenza e torna alla lista. **Dati da chiarire** riguarda campi mancanti o con alternative, non tutte le letture automatiche. **Scadenza superata** filtra la data, anche su una bolletta dichiarata pagata: non significa pagamento non eseguito. **Scadenza entro 30 giorni** include oggi e il giorno 30, esclude date mancanti/ambigue.
+
+**Verifica:** 19 test Python superati; `node --check fold_app/static/app.js`; controlli della logica UI con `node tests/test_ui.mjs`. Prove browser sul runtime a 1440×900 e 390×844: lista, ricerca/filtro/ordine, zero risultati, dettaglio, evidenze, cronologia, ritorno con focus/selezione/scorrimento (anche Avanti/Indietro), nessun overflow orizzontale. Upload PDF, correzione, dichiarazione e persistenza al reload verificati nel medesimo runtime su database temporaneo. Archivio personale consultato senza scritture: conteneva un solo esempio già salvato, nessun corpus di PDF personali. Catture reali in `docs/ux/screenshots/runtime-*`.
+
+**Limiti:** la lista carica i dettagli attraverso l'API esistente, quattro richieste concorrenti per volta; non è validata su centinaia di documenti. Nessun OCR, verifica bancaria o validazione dell'accuratezza su un corpus reale. Mobile verificato con viewport browser, non su dispositivo fisico; nessuna conformità WCAG complessiva dichiarata. Resta valida la conservazione di originali e storia. Nessun commit, push o merge eseguito.
+
 ## Avvio su Windows
 
 Da PowerShell, nella cartella del repository:
@@ -56,7 +70,7 @@ Su Windows i dati predefiniti sono in `%LOCALAPPDATA%\Fold\local-preview\fold.sq
 
 ## Prova guidata (senza documenti personali)
 
-1. Premi **Prova con un esempio**. Viene generato e letto un PDF fittizio con numero `DEMO-001`, importo `84,72 EUR`, POD e scadenza già trascorsa.
+1. Per questa prova usa una **cartella dati temporanea**, separata dall'archivio personale. Scarica il PDF sintetico da `http://127.0.0.1:8765/api/example.pdf` (adatta la porta se diversa) e caricalo con **Aggiungi PDF**. Numero `DEMO-001`, importo `84,72 EUR`, POD e scadenza trascorsa sono dati fittizi della prova. La UI reale non inserisce più un esempio tramite pulsante.
 2. Controlla le quattro schede: ogni lettura riporta pagina e frammento. Scarica l'originale per confrontarlo. **La scadenza trascorsa non viene mostrata come prova di mancato pagamento.**
 3. Su **Totale da pagare**, scegli **Verifica o correggi**, inserisci `34,72` e un motivo. Il valore corrente cambia; gli `84,72` letti dal PDF restano nella **Cronologia**. La correzione ha una base umana distinta dalla lettura originale.
 4. Premi **Dichiara il pagamento**, aggiungi una dichiarazione di esempio e salva. Lo stato diventa **Pagamento dichiarato**, senza fingere una verifica bancaria.

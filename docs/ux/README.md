@@ -4,6 +4,10 @@
 
 Questo riferimento consolida i due pacchetti v0.1 forniti dall'utente e i tre concept successivi. Questi ultimi hanno priorità visiva, entro i vincoli espliciti della richiesta: superfici scure piatte, blu desaturato, stati qualificati e composizioni diverse secondo il compito. Non è una specifica tecnica del backend né una promozione della baseline v2.1.
 
+## Prima integrazione nel runtime
+
+Il 3 novembre 2026 l'utente ha autorizzato la prima integrazione limitata alle bollette elettriche realmente archiviate. Il risultato, le verifiche e i limiti sono nel README principale; le nuove catture `screenshots/runtime-*` riguardano l'app reale. La v0.2 resta invariata come riferimento comportamentale Draft. La direzione grafite della richiesta di integrazione prevale sui colori di questo prototipo. Non sono state integrate persone, beni, altre famiglie o funzioni simulate.
+
 ## Aprire e provare
 
 Aprire con doppio clic **`reference/index.html`** in Edge, Chrome o Firefox. Non servono installazioni, Python, internet, build o account. Tutto funziona anche come file locale. Se si preferisce un server statico:

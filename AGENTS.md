@@ -84,6 +84,10 @@ La baseline v2.1 rimane Draft e congelata; questa autorizzazione non conclude FO
 - Prima di considerare una task conclusa, verifica i criteri di accettazione presenti nella relativa specifica.
 - Non eseguire commit, push o creare branch salvo richiesta esplicita.
 
+## Prima integrazione UX autorizzata
+
+Dal 3 novembre 2026 è autorizzata l'integrazione limitata nel runtime: consultazione delle sole bollette elettriche archiviate, dettaglio, importo/scadenza/situazione, evidenze/correzioni e ritorno al contesto. Leggere il riepilogo e le prove nel README principale. Usare solo dati disponibili nel backend; non aggiungere demo alla UI reale. La v0.2 è un riferimento per comportamenti e percorsi, non un modello estetico: per questa integrazione prevale il tema grafite richiesto dall'utente. Backend e schema restano invariati. Test aggiuntivi: `node tests/test_ui.mjs`. Le prove di scrittura browser usano un database temporaneo dello stesso runtime. AGENTS impact check: aggiornato il confine fra prototipo Draft e integrazione autorizzata; nessuna promozione della baseline o delle funzioni simulate.
+
 ## Prototipo UX isolato
 
 Dal 3 novembre 2026, prima di lavorare sulla direzione UX leggere `docs/ux/README.md` e i riferimenti indicati. È un laboratorio **Draft**, separato da `fold_app/`, con dati e interventi fittizi in memoria. Entry point: `docs/ux/reference/index.html`. I concept recenti hanno priorità visiva entro i vincoli testuali dell'utente; screenshot e mockup non definiscono capacità backend. L'integrazione nel runtime richiede successiva autorizzazione. Non trasformare funzioni simulate in requisiti già implementati o in una promozione dell'anatomia.

@@ -5,6 +5,8 @@
 
 ## Implementazione locale corrente
 
+La prima integrazione UX del 3 novembre 2026 è descritta nel **README principale**: lista e dettaglio delle bollette elettriche reali, tema grafite, evidenze, correzioni e ritorno al contesto. È un risultato eseguibile limitato sulle API esistenti, distinto dal prototipo Draft in `ux/`. Screenshot del runtime: `ux/screenshots/runtime-*`.
+
 Dal 2 novembre 2026 è disponibile una slice eseguibile autorizzata dall'utente: bolletta elettrica PDF con testo, evidenze, revisioni e situazione spiegabile. Il **[README principale](../README.md)** conserva perimetro effettivo, avvio, prova guidata, verifiche e limiti. Il codice è in `fold_app/` e i test in `tests/`; le scelte tecniche limitate sono riassunte in [architecture/README.md](architecture/README.md).
 
 Questa autorizzazione all'implementazione non promuove la baseline v2.1 e non dichiara concluse FOL-37/FOL-38/FOL-39. Gli stati storici e i documenti congelati sotto restano invariati. La funzione realizzata va distinta dalla validazione dell'intero modello.
